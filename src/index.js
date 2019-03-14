@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const BOOKS = [
+    {"title": "Pride and Justice 0", "author": "Jane Austen 0", "description": "this is the description 0"},
+    {"title": "Pride and Justice 1", "author": "Jane Austen 1", "description": "this is the description 1"},
+    {"title": "Pride and Justice 2", "author": "Jane Austen 2", "description": "this is the description 2"}
+]
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App books={BOOKS}/>, document.getElementById('root'));
